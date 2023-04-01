@@ -16,6 +16,7 @@ class LocationSelector extends Component {
     script.async = true;
     window.initMap = this.initMap;
     document.body.appendChild(script);
+    //holaaa
   }
 
   initMap = () => {
