@@ -1,0 +1,29 @@
+[   {
+        "usuario": "paramburu@itba.edu.ar",
+        "Nombre": "Paz",
+        "Apellido": "Aramburu",
+        "Fecha de nacimiento": "22/05/2002",
+        "Ubicacion": "Santa Fe al 2000"
+    },
+    {
+        "usuario": "fmindlin@itba.edu.ar",
+        "Nombre": "Felipe",
+        "Apellido": "Mindlin",
+        "Fecha de nacimiento": "30/09/2002",
+        "Ubicacion": "Comandante Rosales 2515"
+    },
+    {
+        "usuario": "tmartinez@itba.edu.ar",
+        "Nombre": "Tomas",
+        "Apellido": "Martinez",
+        "Fecha de nacimiento": "13/09/2001",
+        "Ubicacion": "Santafe al 2000"
+    },
+    {
+        "usuario": "ntordomar@itba.edu.ar",
+        "Nombre": "Nicolas",
+        "Apellido": "Tordomar",
+        "Fecha de nacimiento": "09/04/2002",
+        "Ubicacion": "Santafe al 2000"
+    }
+]

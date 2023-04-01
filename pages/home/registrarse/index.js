@@ -1,6 +1,7 @@
-import { Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, FormControl, FormLabel, Input} from "@chakra-ui/react";
+import { Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, FormControl, FormLabel, Input, Checkbox} from "@chakra-ui/react";
 import { Component, useState } from "react";
 import {Home} from "../";
+
 const Registrarse = () => {
 
     return (
@@ -38,49 +39,60 @@ const Registrarse = () => {
         >
             <Heading mb={6}>Registrarse</Heading>
             <form>
-            <Stack spacing={1}>
-            <Box p={4}>
-                                            <FormControl>
-                                                <FormLabel><b>Nombre</b></FormLabel>
-                                            </FormControl>
-                                            <FormControl>
-                                                <Input bg="whiteAlpha.900" placeholder="Ingrese su nombre" type="text" />
-                                            </FormControl>
-                                    </Box>
-                                    <Box p={4}>
-                                            <FormControl>
-                                                <FormLabel><b>Apellido</b></FormLabel>
-                                            </FormControl>
-                                            <FormControl>
-                                                <Input bg="whiteAlpha.900" placeholder="Ingrese su apellido" type="text" />
-                                            </FormControl>
-                                    </Box>
-                                    <Box p={4}>
-                                            <FormControl>
-                                                <FormLabel><b>Correo</b></FormLabel>
-                                            </FormControl>
-                                            <FormControl>
-                                                <Input bg="whiteAlpha.900" placeholder="Ingrese su correo" type="email" />
-                                            </FormControl>
-                                    </Box>
-                                    <Box p={4}>
-                                            <FormControl>
-                                                <FormLabel><b>Contraseña</b></FormLabel>
-                                            </FormControl>
-                                            <FormControl>
-                                                <Input bg="whiteAlpha.900" placeholder="Ingrese su contraseña" type="password" />
-                                            </FormControl>
-                                    </Box>
-                                    <Box p={4}>
-                                            <FormControl>
-                                                <FormLabel><b>Confirmar Contraseña</b></FormLabel>
-                                            </FormControl>
-                                            <FormControl>
-                                                <Input bg="whiteAlpha.900" placeholder="Confirme la contraseña" type="password" />
-                                            </FormControl>
-                                    </Box>
-                                    <Button colorScheme="green" type="submit">Iniciar Sesión</Button>
-                                </Stack>
+                <Stack spacing={1}>
+                    <Box p={4}> 
+                            <FormControl>
+                                <FormLabel><b>Nombre</b></FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <Input bg="whiteAlpha.900" placeholder="Ingrese su nombre" type="text" />
+                            </FormControl>
+                    </Box>
+                    <Box p={4}>
+                            <FormControl>
+                                <FormLabel><b>Apellido</b></FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <Input bg="whiteAlpha.900" placeholder="Ingrese su apellido" type="text" />
+                            </FormControl>
+                    </Box>
+                    <Box p={4}>
+                            <FormControl>
+                                <FormLabel><b>Correo</b></FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <Input bg="whiteAlpha.900" placeholder="Ingrese su correo" type="email" />
+                            </FormControl>
+                    </Box>
+                    <Box p={4}>
+                            <FormControl>
+                                <FormLabel><b>Contraseña</b></FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <Input bg="whiteAlpha.900" placeholder="Ingrese su contraseña" type="password" />
+                            </FormControl>
+                    </Box>
+                    <Box p={4}>
+                            <FormControl>
+                                <FormLabel><b>Confirmar Contraseña</b></FormLabel>
+                            </FormControl>
+                            <FormControl>
+                                <Input bg="whiteAlpha.900" placeholder="Confirme la contraseña" type="password" />
+                            </FormControl>
+                    </Box>
+                    <Box>
+                        <FormControl>
+                            <FormLabel><b>Fecha de nacimiento</b></FormLabel>
+                        </FormControl>
+                        <FormControl>
+                            <Input bg="whiteAlpha.900" />
+                        </FormControl>
+                    </Box>
+                    <Checkbox spacing='1rem'>Tengo auto</Checkbox>
+                    <Link href="/home/user">
+                    <Button colorScheme="green" >Registrarse</Button>
+                    </Link>
+                </Stack>
             </form>
         </Box>
         </Flex>

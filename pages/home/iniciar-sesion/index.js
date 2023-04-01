@@ -54,7 +54,9 @@ const IniciarSesion = () => {
                                                 <Input bg="whiteAlpha.900" placeholder="Ingrese su contraseña" type="password" />
                                             </FormControl>
                                     </Box>
-                                    <Button colorScheme="green" type="submit">Iniciar Sesión</Button>
+                                    <Link href="/home/user">
+                                    <Button colorScheme="green" >Iniciar Sesión</Button>
+                                    </Link>
                                 </Stack>
             </form>
         </Box>

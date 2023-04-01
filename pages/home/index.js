@@ -29,8 +29,8 @@ const Home = () => {
                     </Link>
                     {<Box h="100" ></Box>}
                     <Center><Text fontSize="2xl" color="white">¿Primera vez en GoTogether?</Text></Center>
-                    <Link href="/home/registrarse">
-                    <Button width="500px" height="100px" colorScheme='green' fontSize={30}>REGISTRARSE</Button>                
+                    <Link href="home/registrarse">
+                    <Button width="500px" type="submit" height="100px" colorScheme='green' fontSize={30}>REGISTRARSE</Button>                
                     </Link>
                 </Stack>
             </Center>
