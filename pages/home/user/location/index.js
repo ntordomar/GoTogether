@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
 class LocationSelector extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class LocationSelector extends Component {
     script.async = true;
     window.initMap = this.initMap;
     document.body.appendChild(script);
-    //holaaa
+    
   }
 
   initMap = () => {
@@ -37,7 +38,7 @@ class LocationSelector extends Component {
 
   render() {
     return (
-      <div style={{ height: '400px', width: '100%' }} ref={this.mapRef}>
+      <div style={{   height: '200px', width: '200px' }} ref={this.mapRef}>
         {this.state.selectedLocation && (
           <p>
             Selected location: {this.state.selectedLocation.lat}, {this.state.selectedLocation.lng}

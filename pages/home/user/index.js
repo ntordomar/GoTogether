@@ -1,17 +1,17 @@
 import {Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer} from "@chakra-ui/react";
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
-    IconButton,
+// import {
+//     Menu,
+//     MenuButton,
+//     MenuList,
+//     MenuItem,
+//     MenuItemOption,
+//     MenuGroup,
+//     MenuOptionGroup,
+//     MenuDivider,
+//     IconButton,
 
-  } from '@chakra-ui/react'
-import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+//   } from '@chakra-ui/react'
+import { ChevronDownIcon, HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon,EditIcon } from '@chakra-ui/icons'
 import {
     Table,
     Thead,
@@ -23,6 +23,8 @@ import {
     TableCaption,
     TableContainer,
   } from '@chakra-ui/react'
+import LocationSelector from "./location";
+import Menu from "./Menu";
 
 const User = () => {
     return (
@@ -31,15 +33,27 @@ const User = () => {
             <Stack>
             
                 <Flex justifyContent="space-between">
-                <Menu>
+                {/* <Menu>
                     <MenuButton as={IconButton}
                     aria-label='Options'
                     icon={<HamburgerIcon />}
-                    variant='outline' />
-                    <MenuList>
-                        <MenuItem> Hola </MenuItem>
+                    variant='outline' /> */}
+                    {/* <MenuList>
+                        <MenuItem icon={<AddIcon />} command='⌘T'>
+                        New Tab
+                        </MenuItem>
+                        <MenuItem icon={<ExternalLinkIcon />} command='⌘N'>
+                        New Window
+                        </MenuItem>
+                        <MenuItem icon={<RepeatIcon />} command='⌘⇧N'>
+                        Open Closed Tab
+                        </MenuItem>
+                        <MenuItem icon={<EditIcon />} command='⌘O'>
+                        Open File...
+                        </MenuItem>
                     </MenuList>
-                </Menu>
+                </Menu> */}
+                <Menu />
                     <Heading as='h1' size='4xl' left={10} fontFamily={""} color='green.800'>
                         <Link href="/home">
                         GoTogether
@@ -61,46 +75,13 @@ const User = () => {
                 <Spacer />
                 
             </HStack>
+
             <Link href="/home/user/location">
             <Button colorScheme="teal" variant="outline" size="lg" left={10} top={10}>Cambiar ubicacion</Button>
             </Link>
+            <LocationSelector/>
             <Spacer />
-        <TableContainer>
-            <Table variant='striped' colorScheme='teal'>
-                <TableCaption>Imperial to metric conversion factors</TableCaption>
-                <Thead>
-                <Tr>
-                    <Th>To convert</Th>
-                    <Th>into</Th>
-                    <Th isNumeric>multiply by</Th>
-                </Tr>
-                </Thead>
-                <Tbody>
-                <Tr>
-                    <Td>inches</Td>
-                    <Td>millimetres (mm)</Td>
-                    <Td isNumeric>25.4</Td>
-                </Tr>
-                <Tr>
-                    <Td>feet</Td>
-                    <Td>centimetres (cm)</Td>
-                    <Td isNumeric>30.48</Td>
-                </Tr>
-                <Tr>
-                    <Td>yards</Td>
-                    <Td>metres (m)</Td>
-                    <Td isNumeric>0.91444</Td>
-                </Tr>
-                </Tbody>
-                <Tfoot>
-                <Tr>
-                    <Th>To convert</Th>
-                    <Th>into</Th>
-                    <Th isNumeric>multiply by</Th>
-                </Tr>
-                </Tfoot>
-            </Table>
-            </TableContainer>
+        
         </Box>
         </>
 
