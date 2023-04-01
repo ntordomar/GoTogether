@@ -1,5 +1,7 @@
 import {Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem} from "@chakra-ui/react";
 import { Component } from "react";
+import {IniciarSesion} from "./iniciar-sesion";
+import {Registrarse} from "./registrarse";
 
 const Home = () => {
   return (
@@ -22,10 +24,14 @@ const Home = () => {
             <Center>
                 <Stack>
                     {<Box m = "20" ></Box>}
+                    <Link href="/home/iniciar-sesion">
                     <Button width="500px" height="100px" colorScheme='green' fontSize={30}>INCIAR SESIÓN</Button>
+                    </Link>
                     {<Box h="100" ></Box>}
                     <Center><Text fontSize="2xl" color="white">¿Primera vez en GoTogether?</Text></Center>
+                    <Link href="/home/registrarse">
                     <Button width="500px" height="100px" colorScheme='green' fontSize={30}>REGISTRARSE</Button>                
+                    </Link>
                 </Stack>
             </Center>
         </Box>  
