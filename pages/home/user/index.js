@@ -12,6 +12,17 @@ import {
 
   } from '@chakra-ui/react'
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import {
+    Table,
+    Thead,
+    Tbody,
+    Tfoot,
+    Tr,
+    Th,
+    Td,
+    TableCaption,
+    TableContainer,
+  } from '@chakra-ui/react'
 
 const User = () => {
     return (
@@ -50,6 +61,9 @@ const User = () => {
                 <Spacer />
                 
             </HStack>
+        </Box>
+        <Box>
+            
         </Box>
         </>
 
