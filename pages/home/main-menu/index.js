@@ -77,9 +77,9 @@ import { NavBar } from "../components/NavBar";
     );
   };
 
-//   export async function getStaticProps() {
-//     const trips = await import("../trips.json").then((m) => m.default);
-//     return { props: { trips } };
-//     }
+  export async function getStaticProps() {
+    const trips = await import("../trips.json").then((m) => m.default);
+    return { props: { trips } };
+    }
 
     export default MainMenu;

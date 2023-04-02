@@ -29,9 +29,9 @@ const Agenda = () => {
         alert("Opción no válida");
         return;
       }
-      const updatedSchedule = [...user.schedule];
-      updatedSchedule[hourIndex][dayIndex] = selectedOption;
-      setUser({ ...user, schedule: updatedSchedule });
+      // const updatedSchedule = [...user.schedule];
+      // updatedSchedule[hourIndex][dayIndex] = selectedOption;
+      // setUser({ ...user, schedule: updatedSchedule });
       setSelectedBlocks([...selectedBlocks, { dayIndex, hourIndex, selectedOption }]);
       //write user to file
       // const res = await fetch("/api/save", {
