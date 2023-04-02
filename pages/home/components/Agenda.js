@@ -1,12 +1,13 @@
 import { Box, Flex, Text, Button} from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import { myUser } from "../../../my-user.json";
 
 const Agenda = () => {
   const days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
   const hours = ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 
   const [selectedBlocks, setSelectedBlocks] = useState([]); // selectedBlocls es un array vacio. setSelectedBlocks
-  // const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState(myUser);
   // useEffect(() => {
 
   //   const fetchData = async () => {
@@ -29,9 +30,9 @@ const Agenda = () => {
         alert("Opción no válida");
         return;
       }
-      const updatedSchedule = [...user.schedule];
-      updatedSchedule[hourIndex][dayIndex] = selectedOption;
-      setUser({ ...user, schedule: updatedSchedule });
+      // const updatedSchedule = [...user.schedule];
+      // updatedSchedule[hourIndex][dayIndex] = selectedOption;
+      // setUser({ ...user, schedule: updatedSchedule });
       setSelectedBlocks([...selectedBlocks, { dayIndex, hourIndex, selectedOption }]);
       //write user to file
       // const res = await fetch("/api/save", {
