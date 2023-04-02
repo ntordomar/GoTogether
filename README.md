@@ -1,4 +1,4 @@
-##GoTogether
+## GoTogether
 
 Para hacer funcionar a la aplicación, hay que seguir los siguientes pasos:
 
