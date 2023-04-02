@@ -1,4 +1,4 @@
-import {IconButton ,Link, Text, ButtonGroup, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer} from "@chakra-ui/react";
+import {IconButton ,Link, Text, ButtonGroup, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer, Wrap} from "@chakra-ui/react";
 
 import LocationSelector from "./location";
 import Agenda from "../components/Agenda";
@@ -34,8 +34,11 @@ const User = () => {
                 </Link>
             </HStack>
 
-            
-            <LocationSelector onLocationSelect={handleLocationSelect(LocationSelector.send)} />
+            <Stack>
+                <Center>
+                    <LocationSelector onLocationSelect={handleLocationSelect(LocationSelector.send)} />
+                </Center>
+            </Stack>
 
             <br/>
                     <br/>

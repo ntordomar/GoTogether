@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button} from "@chakra-ui/react";
+import { Box, Flex, Text, Button, Center} from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
 const Agenda = () => {
@@ -54,21 +54,34 @@ const Agenda = () => {
     return selectedBlocks.some(block => block.dayIndex === dayIndex && block.hourIndex === hourIndex);
   };
 
+  const getBlockSelectedOption = (dayIndex, hourIndex) => {
+    const block = selectedBlocks.find(block => block.dayIndex === dayIndex && block.hourIndex === hourIndex);
+    return block ? block.selectedOption : "";
+  };
+
   const getBlockColor = (dayIndex, hourIndex) => {
     if (isBlockSelected(dayIndex, hourIndex)) {
-      return "rgba(224, 190, 145, 1)";
+      switch(getBlockSelectedOption(dayIndex, hourIndex)) {
+        case "SDR":
+          return "rgba(224, 190, 145, 1)";
+        case "SDT":
+          return "blue.200";
+        case "SDF":
+          return "red.200";
+          
+      }
     } else {
       return "#f6e3da";
     }
   };
 
   return (
-    <Box w="100%" bg="green.300">
+    <Box w="100%" bg="green.300" minH={600}>
       <Flex>
         <Box w="50px" bg="#f6e3da"></Box>
         {days.map((day, dayIndex) => (
           <Box key={dayIndex} flex="1" bg="green.800" borderRight={dayIndex < days.length - 1 ? "1px solid gray" : "none"} userSelect="auto">
-            <Text textAlign="center">{day}</Text>
+            <Text textAlign="center" textColor={"white"}>{day}</Text>
           </Box>
         ))}
       </Flex>
@@ -76,7 +89,7 @@ const Agenda = () => {
         <Box w="50px" bg="green.800" h="100%">
           {hours.map((hour, hourIndex) => (
             <Box key={hourIndex} h="calc(100%/15)" borderBottom="1px solid gray" userSelect="auto">
-              <Text textAlign="center">{hour}</Text>
+              <Text textAlign="center" textColor={"white"}>{hour}</Text>
             </Box>
           ))}
         </Box>
@@ -90,11 +103,13 @@ const Agenda = () => {
           </Box>
         ))}
       
-
       </Flex>
-      <Button>
-        Guardar
+      <Center>
+      <Button bg={"green.700"} textColor={"white"} top={20}>
+          Guardar Cambios
       </Button>
+      </Center>
+      
     </Box>
 
   ); 
