@@ -13,30 +13,15 @@ import {
   } from '@chakra-ui/react'
 
 import { Menu, MenuButton, MenuList, MenuItem, MenuDivider, IconButton } from "@chakra-ui/react"
-import BurgerMenu from "../user/BurgerMenu";
+import BurgerMenu from "../components/BurgerMenu";
+import { NavBar } from "../components/NavBar";
 
   const MainMenu = ({ trips }) => {
 
+
     return (
         <>
-        <Box bg = "whiteAlpha.900" >
-            <Stack>
-            
-                <Flex justifyContent="space-between">
-                <BurgerMenu />
-                    <Heading as='h1' size='4xl' left={1} fontFamily={""} color='green.800'>
-                        <Link href="/home">
-                        GoTogether
-                        </Link>
-                    </Heading>
-                    
-                    <Avatar top='20px' right='10px' bg='teal.500' />
-                </Flex>
-                <Grid>
-                    <GridItem h='3' weight="100vh" bg='gray.700' /> 
-                </Grid>
-            </Stack>
-        </Box>
+        <NavBar />
         <Box bg = "green.300" minH="400">
                 <Center>
                     <Heading as='h1' size='4xl' fontFamily={""} color='green.700'>
@@ -92,9 +77,9 @@ import BurgerMenu from "../user/BurgerMenu";
     );
   };
 
-  export async function getStaticProps() {
-    const trips = await import("../trips.json").then((m) => m.default);
-    return { props: { trips } };
-    }
+//   export async function getStaticProps() {
+//     const trips = await import("../trips.json").then((m) => m.default);
+//     return { props: { trips } };
+//     }
 
     export default MainMenu;

@@ -6,7 +6,7 @@ const Registrarse = () => {
 
     return (
         <>
-        <Box bg = "whiteAlpha.900" >
+        <Box bg = "#f6e3da" >
             <Stack>
             
                 <Flex justifyContent="space-between">
@@ -22,7 +22,7 @@ const Registrarse = () => {
             </Stack>
         </Box>
         <Flex 
-        bg="green.300"
+        bg="#bde6b6"
         w="100%"
         h="100vh"
         minH={"100vh"}
@@ -30,10 +30,10 @@ const Registrarse = () => {
         justifyContent="center"
         >
         <Box
-            bg="white"
+            bg="#f6e3da"
             w="400px"
-            p={12}
-            borderRadius={8}
+            p={8}
+            borderRadius={12}
             boxShadow="lg"
             
         >
@@ -85,10 +85,10 @@ const Registrarse = () => {
                             <FormLabel><b>Fecha de nacimiento</b></FormLabel>
                         </FormControl>
                         <FormControl>
-                            <Input bg="whiteAlpha.900" />
+                            <Input bg="whiteAlpha.900" placeholder="YYYY/MM/DD" />
                         </FormControl>
                     </Box>
-                    <Checkbox spacing='1rem'>Tengo auto</Checkbox>
+                    <Checkbox borderColor="#000000" spacing='1rem'>Tengo auto</Checkbox>
                     <Link href="/home/user">
                     <Button colorScheme="green" >Registrarse</Button>
                     </Link>

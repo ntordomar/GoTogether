@@ -5,6 +5,8 @@ class LocationSelector extends Component {
     super(props);
     this.state = {
       selectedLocation: null,
+      lat: 0,
+    lng: 0
     };
     this.mapRef = React.createRef();
   }
@@ -18,6 +20,12 @@ class LocationSelector extends Component {
     document.body.appendChild(script);
   }
 
+  sendLocation = () => {
+    const { lat, lng } = this.state;
+    this.props.onLocationSelect({ lat, lng });
+  };
+  
+
   initMap = () => {
     const map = new window.google.maps.Map(this.mapRef.current, {
       center: { lat: 0, lng: 0 },
@@ -30,7 +38,7 @@ class LocationSelector extends Component {
     window.google.maps.event.addListener(map, 'click', (event) => {
       const { lat, lng } = event.latLng.toJSON();
       marker.setPosition(event.latLng);
-      this.setState({ selectedLocation: { lat, lng } });
+      this.setState({ selectedLocation: { lat, lng }, lat: lat, lng: lng });
     });
   };
 

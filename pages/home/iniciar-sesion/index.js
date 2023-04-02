@@ -5,7 +5,7 @@ const IniciarSesion = () => {
     return (
         <>
         
-        <Box bg = "whiteAlpha.900" >
+        <Box bg = "#F6E3DA" >
             <Stack>
             
                 <Flex justifyContent="space-between">
@@ -22,14 +22,14 @@ const IniciarSesion = () => {
             </Stack>
         </Box>
         <Flex
-        bg="green.300"
+        bg="#bde6b6"
         w="100%"
         h="100vh"
         alignItems="center"
         justifyContent="center"
         >
         <Box
-            bg="white"
+            bg="#F6E3DA"
             w="400px"
             p={12}
             borderRadius={8}
@@ -55,7 +55,7 @@ const IniciarSesion = () => {
                                             </FormControl>
                                     </Box>
                                     <Link href="/home/user">
-                                    <Button colorScheme="green" >Iniciar Sesión</Button>
+                                    <Button style={{ marginLeft: '73px' }} colorScheme="green" >Iniciar Sesión</Button>
                                     </Link>
                                 </Stack>
             </form>

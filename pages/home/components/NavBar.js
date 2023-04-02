@@ -1,41 +1,37 @@
-import BurgerMenu from "../user/BurgerMenu";
+import BurgerMenu from "./BurgerMenu";
 import { Box, Button, Flex, Text, Stack, Heading, Link, IconButton, Avatar, Grid, GridItem } from '@chakra-ui/react';
 import { BellIcon } from "@chakra-ui/icons";
 
-const Contactos = () => {
+export function NavBar() {
   return (
     <>
-    <Box bg = "whiteAlpha.900" >
+    <Box bg = "#f6e3da" >
             <Stack>
                 <Flex justifyContent="space-between">
                 <BurgerMenu />
-                    <Heading as='h1' size='4xl'  fontFamily={""} color='green.800'>
+                    <Heading as='h1' size='3xl'  fontFamily="sans-serif" color='green.800'>
                         <Link href="/home">
                         GoTogether
                         </Link>
                     </Heading>
                     <Box>
                     <Link href="/home/notificaciones">
-                    <IconButton fontSize="6xl"
-                        icon={<BellIcon />}
+                    <IconButton fontSize="5xl"
+                        icon={<BellIcon background="#f6e3da"/>}
                         top={5}
                         right={5}
                     />
                     </Link>
-                    <Avatar top='20px' right='10px' bg='teal.500' />
+                    <Avatar fontSize="5x1" top='15px' right='10px' bg='teal.500' />
                     </Box>
                 </Flex>
                 <Grid>
-                    <GridItem h='3' weight="100vh" bg='gray.700' /> 
+                    <GridItem h='3' weight="100vh" bg='green.800' /> 
                 </Grid>
             </Stack>
         </Box>
         
-        <Box bg = "green.300" minH="908">
-        </Box>
         </>
   )
 }
-
-export default Contactos;
 

@@ -1,92 +1,51 @@
-import {IconButton ,Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer} from "@chakra-ui/react";
-// import {
-//     Menu,
-//     MenuButton,
-//     MenuList,
-//     MenuItem,
-//     MenuItemOption,
-//     MenuGroup,
-//     MenuOptionGroup,
-//     MenuDivider,
-//     IconButton,
+import {IconButton ,Link, Text, ButtonGroup, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer} from "@chakra-ui/react";
 
-//   } from '@chakra-ui/react'
-import { ChevronDownIcon, HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon,EditIcon, BellIcon } from '@chakra-ui/icons'
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
-  } from '@chakra-ui/react'
 import LocationSelector from "./location";
-import BurgerMenu from "./BurgerMenu";
-import Agenda from "./Agenda";
-import { Wrap, WrapItem } from '@chakra-ui/react'
-import {Notificaciones} from "../notificaciones";
+import Agenda from "../components/Agenda";
+import { NavBar } from "../components/NavBar";
+import { Component } from "react";
+
+
 const User = () => {
+    const handleLocationSelect = (lat, lng) => {
+        console.log(`Latitud: ${lat}, Longitud: ${lng}`);
+    };
+      
+
     return (
         <>
-        <Box bg = "whiteAlpha.900" >
-            <Stack>
-                <Flex justifyContent="space-between">
-                <BurgerMenu />
-                    <Heading as='h1' size='4xl'  fontFamily={""} color='green.800'>
-                        <Link href="/home">
-                        GoTogether
-                        </Link>
-                    </Heading>
-                    <Box>
-                    <Link href="/home/notificaciones">
-                    <IconButton fontSize="6xl"
-                        icon={<BellIcon />}
-                        top={5}
-                        right={5}
-                    />
-                    </Link>
-                    <Avatar top='20px' right='10px' bg='teal.500' />
-                    </Box>
-                </Flex>
-                <Grid>
-                    <GridItem h='3' weight="100vh" bg='gray.700' /> 
-                </Grid>
-            </Stack>
-        </Box>
-            <Box bg="green.300" minH="300px">
+        <NavBar/>
+            <Box bg="#bde6b6" minH="300px">
+            <br/>
             <HStack>
-                <Heading as='h3' size='3xl' left={10} fontFamily={""} color='green.800'>
-                        Bienvenido Usuario
+                <Heading as='h3' size='2xl' left={10} fontFamily={""} color='green.800'>
+                        Bienvenido Juan!
                 </Heading>
-                <br/>
-                <br/>
-                <br/>
                 
             </HStack>
+            <br/>
         
-                <HStack spacing='24px'  >
-                    <Box>     
-                    <Text left='45' fontSize="xl" ><b>Tu dirección de origen</b></Text>
-                    </Box>
-                    <Box alignContent="right">
-                    <Link href="/home/user/location">
-                    <Button colorScheme="teal" variant="outline" size="lg" left={10} top={1}>Cambiar ubicacion</Button>
-                    </Link>
-                    </Box>
-                </HStack>
+            <HStack>
+                <Box p='2'>
+                    <Text left='45' fontSize="xl" color='green.800'><b>Tu dirección de origen</b></Text>
+                </Box>
+                <Link href="/home/user/location">
+                    <Button colorScheme="teal" variant="outline" size="lg" left={30} top={1}>Cambiar ubicacion</Button>
+                </Link>
+            </HStack>
+
             
-                <LocationSelector/>
+            <LocationSelector onLocationSelect={handleLocationSelect(LocationSelector.send)} />
+
+            <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                 
 
                 <Stack>
-                    <br/>
-                    <br/>
-                    <br/>
                     <Box>
-                        <Text fontSize="xl" whiteSpace="pre-wrap"> <b>Tus horarios en ITBA</b></Text>
+                        <Text fontSize="xl" whiteSpace="pre-wrap" color='green.800'> <b>            Seleccione sus horarios en ITBA</b></Text>
                         </Box>
                         <Agenda/>
                         <br/>
@@ -98,5 +57,6 @@ const User = () => {
 
     );
     };
+
 
 export default User;
