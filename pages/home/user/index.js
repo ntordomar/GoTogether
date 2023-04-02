@@ -1,4 +1,4 @@
-import {Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer} from "@chakra-ui/react";
+import {IconButton ,Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, GridItem, Avatar, Spacer} from "@chakra-ui/react";
 // import {
 //     Menu,
 //     MenuButton,
@@ -11,7 +11,7 @@ import {Link, Text, Box,Stack, Heading, Button, Center, HStack, Flex, Grid, Grid
 //     IconButton,
 
 //   } from '@chakra-ui/react'
-import { ChevronDownIcon, HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon,EditIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon,EditIcon, BellIcon } from '@chakra-ui/icons'
 import {
     Table,
     Thead,
@@ -24,65 +24,76 @@ import {
     TableContainer,
   } from '@chakra-ui/react'
 import LocationSelector from "./location";
-import Menu from "./Menu";
-
+import BurgerMenu from "./BurgerMenu";
+import Agenda from "./Agenda";
+import { Wrap, WrapItem } from '@chakra-ui/react'
+import {Notificaciones} from "../notificaciones";
 const User = () => {
     return (
         <>
         <Box bg = "whiteAlpha.900" >
             <Stack>
-            
                 <Flex justifyContent="space-between">
-                {/* <Menu>
-                    <MenuButton as={IconButton}
-                    aria-label='Options'
-                    icon={<HamburgerIcon />}
-                    variant='outline' /> */}
-                    {/* <MenuList>
-                        <MenuItem icon={<AddIcon />} command='⌘T'>
-                        New Tab
-                        </MenuItem>
-                        <MenuItem icon={<ExternalLinkIcon />} command='⌘N'>
-                        New Window
-                        </MenuItem>
-                        <MenuItem icon={<RepeatIcon />} command='⌘⇧N'>
-                        Open Closed Tab
-                        </MenuItem>
-                        <MenuItem icon={<EditIcon />} command='⌘O'>
-                        Open File...
-                        </MenuItem>
-                    </MenuList>
-                </Menu> */}
-                <Menu />
-                    <Heading as='h1' size='4xl' left={10} fontFamily={""} color='green.800'>
+                <BurgerMenu />
+                    <Heading as='h1' size='4xl'  fontFamily={""} color='green.800'>
                         <Link href="/home">
                         GoTogether
                         </Link>
                     </Heading>
-                    
-                    <Avatar bg='teal.500' />
+                    <Box>
+                    <Link href="/home/notificaciones">
+                    <IconButton fontSize="6xl"
+                        icon={<BellIcon />}
+                        top={5}
+                        right={5}
+                    />
+                    </Link>
+                    <Avatar top='20px' right='10px' bg='teal.500' />
+                    </Box>
                 </Flex>
                 <Grid>
                     <GridItem h='3' weight="100vh" bg='gray.700' /> 
                 </Grid>
             </Stack>
         </Box>
-            <Box bg="green.300" height="100vh">
+            <Box bg="green.300" minH="300px">
             <HStack>
                 <Heading as='h3' size='3xl' left={10} fontFamily={""} color='green.800'>
                         Bienvenido Usuario
                 </Heading>
-                <Spacer />
+                <br/>
+                <br/>
+                <br/>
                 
             </HStack>
-
-            <Link href="/home/user/location">
-            <Button colorScheme="teal" variant="outline" size="lg" left={10} top={10}>Cambiar ubicacion</Button>
-            </Link>
-            <LocationSelector/>
-            <Spacer />
         
-        </Box>
+                <HStack spacing='24px'  >
+                    <Box>     
+                    <Text left='45' fontSize="xl" ><b>Tu dirección de origen</b></Text>
+                    </Box>
+                    <Box alignContent="right">
+                    <Link href="/home/user/location">
+                    <Button colorScheme="teal" variant="outline" size="lg" left={10} top={1}>Cambiar ubicacion</Button>
+                    </Link>
+                    </Box>
+                </HStack>
+            
+                <LocationSelector/>
+                
+
+                <Stack>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <Box>
+                        <Text fontSize="xl" whiteSpace="pre-wrap"> <b>Tus horarios en ITBA</b></Text>
+                        </Box>
+                        <Agenda/>
+                        <br/>
+                </Stack>
+                
+                </Box>
+               
         </>
 
     );

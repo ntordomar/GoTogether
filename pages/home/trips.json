@@ -1,0 +1,105 @@
+[
+    {
+      "date": "2023-04-03",
+      "formattedDate": "Lunes, Abril 3, 2023",
+      "origin": "Teodoro Garcia 2165",
+      "destination": "ITBA Sede Rectorado",
+      "departureHour": "8:00 AM",
+      "approxPrice": "$120",
+      "driver": {
+        "name": "Matiás Dominguez",
+        "phone": "11-6385-9485",
+        "rating": 4.5
+      },
+      "passengers": [
+        { "name": " Felipe Mindlin", "phone": "555-5678", "rating": 4.2 },
+        { "name": "Sofía Otegui", "phone": "555-9012", "rating": 4.8 }
+      ]
+    },
+    {
+        "date": "2023-04-03",
+        "formattedDate": "Lunes, Abril 3, 2023",
+        "origin": "ITBA Sede Rectorado",
+        "destination": "Teodoro Garcia 2165",
+        "departureHour": "12:00 PM",
+        "approxPrice": "$120",
+        "driver": {
+          "name": "Matiás Dominguez",
+          "phone": "11-6385-9485",
+          "rating": 4.5
+        },
+        "passengers": [
+          { "name": " Felipe Mindlin", "phone": "555-5678", "rating": 4.2 },
+          { "name": "Sofía Otegui", "phone": "555-9012", "rating": 4.8 }
+        ]
+      },
+    {
+      "date": "2023-04-04",
+      "formattedDate": "Martes, Abril 4, 2023",
+      "origin": "Rosales 2515",
+      "destination": "ITBA Sede Distrito Tecnológico",
+      "departureHour": "5:30 PM",
+      "approxPrice": "$217",
+      "driver": {
+        "name": "Tadeo Gómez",
+        "phone": "11-6385-9485",
+        "rating": 4.8
+      },
+      "passengers": [
+        { "name": "Matiás Dominguez", "phone": "555-7890", "rating": 4.5 },
+        { "name": "Alicia Castro", "phone": "555-2345", "rating": 4.7 }
+      ]
+    },
+    {
+        "date": "2023-04-04",
+        "formattedDate": "Martes, Abril 4, 2023",
+        "origin": "Rosales 2515",
+        "destination": "ITBA Sede Distrito Tecnológico",
+        "departureHour": "9:30 PM",
+        "approxPrice": "$217",
+        "driver": {
+          "name": "Tadeo Gómez",
+          "phone": "11-6385-9485",
+          "rating": 4.8
+        },
+        "passengers": [
+          { "name": "Matiás Dominguez", "phone": "555-7890", "rating": 4.5 },
+          { "name": "Alicia Castro", "phone": "555-2345", "rating": 4.7 }
+        ]
+      },
+    {
+      "date": "2023-04-05",
+      "formattedDate": "Miércoles, Abril 5, 2023",
+      "origin": "Teodoro Garcia 2165",
+      "destination": "ITBA Sede Distrito Financiero",
+      "departureHour": "6:00 AM",
+      "approxPrice": "$97",
+      "driver": {
+        "name": "Matiás Dominguez",
+        "phone": "11-6385-9485",
+        "rating": 4.5
+      },
+      "passengers": [
+        { "name": "Marcos Genti", "phone": "555-9012", "rating": 4.7 },
+        { "name": "Nicolás Buscemi", "phone": "555-3456", "rating": 4.2 }
+      ]
+    },
+    {
+        "date": "2023-04-05",
+        "formattedDate": "Miércoles, Abril 5, 2023",
+        "origin": "ITBA Sede Distrito Financiero",
+        "destination": "Teodoro Garcia 2165",
+        "departureHour": "11:00 AM",
+        "approxPrice": "$97",
+        "driver": {
+          "name": "Matiás Dominguez",
+          "phone": "11-6385-9485",
+          "rating": 4.5
+        },
+        "passengers": [
+          { "name": "Marcos Genti", "phone": "555-9012", "rating": 4.7 },
+          { "name": "Nicolás Buscemi", "phone": "555-3456", "rating": 4.2 }
+        ]
+      }
+  ]
+  
