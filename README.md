@@ -25,5 +25,5 @@ para iniciar la aplicación.
 
 ## Extras
 
-Si aparece un error en la pantalla "Home" es debido a un error externo de la API de GoogleMaps.
+Si aparece un error en la pantalla "User" es debido a un error externo de la API de GoogleMaps.
 
