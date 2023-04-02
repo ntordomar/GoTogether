@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, Button, Center, Flex, Heading, Text } from "@chakra-ui/react";
 import {NavBar} from "../components/NavBar";
 
-const Notification = ({ text, onAccept, onDecline }) => {
+const Notification = ({ text, onAccept, onDecline, origen, destino, hora, precio, conductor, pasajeros }) => {
   return (
     <Box bg="white" border="1px" borderColor="gray.300" borderRadius="md" boxShadow="sm" p={4} my={2} width="100%">
       <Flex justifyContent="space-between" alignItems="center">
@@ -15,27 +15,27 @@ const Notification = ({ text, onAccept, onDecline }) => {
       <Box mt={4}>
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontWeight="bold">Origen:</Text>
-          <Text>Sample Origin</Text>
+          <Text>{origen}</Text>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontWeight="bold">Destino:</Text>
-          <Text>Sample Destination</Text>
+          <Text>{destino}</Text>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontWeight="bold">Hora de Salida:</Text>
-          <Text>9:00 AM</Text>
+          <Text>{hora}</Text>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontWeight="bold">Precio Approx:</Text>
-          <Text>$10.00</Text>
+          <Text>{precio}</Text>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontWeight="bold">Conductor:</Text>
-          <Text>John Doe</Text>
+          <Text>{conductor}</Text>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontWeight="bold">Pasajeros:</Text>
-          <Text>0/3</Text>
+          <Text>{pasajeros}</Text>
         </Flex>
       </Box>
     </Box>
@@ -47,14 +47,32 @@ const NotificationCenter = () => {
     {
       id: 1,
       text: "Tenes un nuevo match de carpool!",
+      origen: "Teodoro Garcia 2165",
+      destino: "ITBA Sede Rectorado",
+      hora: "8:00 AM",
+      precio: "$120",
+      conductor: "Matiás Dominguez",
+      pasajeros: "2/3"
     },
     {
       id: 2,
       text: "Tu pedido de carpool ha sido aceptado!",
+      origen: "ITBA Sede Rectorado",
+      destino: "Teodoro Garcia 2165",
+      hora: "8:00 AM",
+      precio: "$120",
+      conductor: "Matiás Dominguez",
+      pasajeros: "2/3"
     },
     {
       id: 3,
       text: "Tu pedido de carpool ha sido aceptado!",
+      origen: "Rosales 2515",
+      destino: "ITBA Sede Distrito Tecnológico",
+      hora: "5:30 PM",
+      precio: "$217",
+      conductor: "Tadeo Gómez",
+      pasajeros: "2/3"
     },
   ]);
 
@@ -77,12 +95,18 @@ const NotificationCenter = () => {
         <Center>
         <Heading as="h1" size="2xl" mb={4}>Notificaciones</Heading>
         </Center>
-      {notifications.map(({ id, text }) => (
+      {notifications.map(({ id, text, origen, destino, hora, precio, conductor, pasajeros }) => (
         <Notification
           key={id}
           text={text}
           onAccept={() => handleAccept(id)}
           onDecline={() => handleDecline(id)}
+          origen={origen}
+          destino={destino}
+          hora = {hora}
+          precio = {precio}
+          conductor = {conductor}
+          pasajeros={pasajeros}
         />
       ))}
     </Box>
